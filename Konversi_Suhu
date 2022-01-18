@@ -1,0 +1,78 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    
+  float c, f, k, r;
+  
+  char p;
+  cout<<"KONVERSI SUHU"<<endl;
+  cout<<"\n1. Celsius ke Fahrenheit, Kelvin, dan Reamur."<<endl;
+  cout<<"2. Fahrenheit ke Celsius, Kelvin, dan Reamur."<<endl;
+  cout<<"3. Kelvin ke Celsius, Fahrenheit, dan Reamur."<<endl;
+  cout<<"4. Reamur ke Celsius, Fahrenheit, dan Kelvin."<<endl;
+  cout<<"\nPILIH (1/2/3/4): ";
+  cin>>p;
+  
+  if(p=='1')
+   {
+      cout<<"\nMasukan Suhu (Celsius) : ";
+      cin>>c;
+
+      f=(c*9/5)+32;
+      k=c+273;
+      r=c*4/5 ;
+      
+      cout<<"\n"<<c<<" C = "<<f<<" F"<<endl;
+      cout<<c<<" C = "<<k<<" K"<<endl;
+      cout<<c<<" C = "<<r<<" R"<<endl;
+   }
+   else if (p=='2')
+   {
+      cout<<"\nMasukan Suhu (Fahrenheit) : ";
+      cin>>f;
+
+      c=(f-32)*5/9;
+      k=(f-32)*5/9+273;
+      r=(f-32)*4/9;
+      
+      cout<<"\n"<<f<<" F = "<<c<<" C"<<endl;
+      cout<<f<<" F = " <<k<<" K"<<endl;
+      cout<<f<<" F = " <<r<<" R"<<endl;
+      
+   }
+   else if(p=='3')
+   {
+      cout<<"\nMasukan Suhu (Kelvin) : ";
+      cin>>k;
+
+      c=k-273;
+      f=(k-273)*9/5+32;
+      r=(k-273)*4/5;
+      
+      cout<<"\n"<<k<<" K = "<<c<<" C"<<endl;
+      cout<<k<<" K = " <<f<<" F" <<endl;
+      cout<<k<<" K = " <<r<<" R" <<endl;
+      
+   }
+   else if(p=='4')
+   {
+      cout<<"\nMasukan Suhu (Reamur) : ";
+      cin>>r;
+
+      c=r*5/4;
+      f=r*9/4+32;
+      k=(r*5/4)+273;
+      
+      cout<<"\n"<<r<<" R = "<<c<<" C"<<endl;
+      cout<<r<<" R = "<<f<<" F"<<endl;
+      cout<<r<<" R = "<<k<<" K"<<endl;
+   }
+   else
+   {
+      cout<<"\nInputan salah."<<endl;
+   }
+
+   return 0;
+}
